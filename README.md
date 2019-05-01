@@ -10,6 +10,8 @@ There are 2 parts:
 
 1. `cd server`
 1. `npm install`
+1. `npx sequelize db:migrate`
+1. `npx sequelize db:seed:all`
 1. `npm start`
 
 ### Front-end
