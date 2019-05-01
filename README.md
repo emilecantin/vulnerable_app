@@ -8,12 +8,12 @@ There are 2 parts:
 
 ### Backend
 
-1. `cd server
+1. `cd server`
 1. `npm install`
 1. `npm start`
 
 ### Front-end
 
-1. `cd client
+1. `cd client`
 1. `yarn`
 1. `yarn start`
