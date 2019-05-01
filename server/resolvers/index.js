@@ -5,7 +5,7 @@ const resolvers = {
   Query: {
     async house(obj, args) {
       const houseResult = await db.sequelize.query(`SELECT * FROM Houses WHERE id = ${args.id}`);
-      const pointsResult = await db.sequelize.query(`SELECT SUM(quantity) AS points FROM PointAssignations WHERE house = ${house.id}`);
+      const pointsResult = await db.sequelize.query(`SELECT SUM(quantity) AS points FROM PointAssignations WHERE house = ${args.id}`);
       const assignationsResult = await db.sequelize.query(`SELECT * FROM PointAssignations WHERE house = ${args.id}`);
       return {
         ...houseResult[0][0],

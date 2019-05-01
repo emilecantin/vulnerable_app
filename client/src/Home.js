@@ -1,6 +1,7 @@
 import React from 'react';
 import { Query } from "react-apollo";
 import { gql } from "apollo-boost";
+import {Link} from 'react-router-dom';
 
 const query = gql`
 {
@@ -21,9 +22,9 @@ const Points = () => (
       if (error) return <p>Error :(</p>;
 
       if(data && data.houses) {
-        return data.houses.map(({ name, points }) => (
+        return data.houses.map(({ id, name, points }) => (
           <div key={name}>
-            <p>{name}: {points || 0}</p>
+            <p><Link to={`/${id}`}>{name}</Link>: {points || 0}</p>
           </div>
         ));
       }
