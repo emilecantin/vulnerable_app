@@ -28,11 +28,9 @@ const Points = ({id}) => (
         return (
           <>
               <p>Error :(</p>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: `Could not get house ID:${id}`
-                }}
-              />
+              <p>
+                  Could not get house ID:{id}
+              </p>
           </>
         );
       }
